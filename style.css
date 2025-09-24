@@ -1,0 +1,365 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: black;
+    color: white;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active {
+    color: royalblue;
+}
+
+/* Hero Section */
+.hero {
+    background-color: royalblue;
+    text-align: center;
+    padding: 120px 20px;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+/* Home Images Section */
+.home-images {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.home-images h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.image-box {
+    width: 45%;
+    border-radius: 12px;
+    overflow: hidden;
+    perspective: 1000px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-box:hover img {
+    transform: rotateY(10deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Service Summary Box */
+.service-summary {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e0f0ff; /* light royal blue */
+    border-left: 4px solid royalblue;
+    border-radius: 8px;
+}
+
+.service-summary p {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.service-summary .btn-link {
+    text-decoration: none;
+    color: royalblue;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.service-summary .btn-link:hover {
+    color: #0050c8;
+}
+
+/* Services Section */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background-color: black;
+    color: white;
+    width: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: royalblue;
+}
+
+.card-title {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #111;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover .card-title {
+    background-color: #000; /* slightly darker black on hover */
+}
+
+.card-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 20px;
+    transition: max-height 0.6s ease, opacity 0.5s ease, padding 0.3s ease;
+}
+
+.card:hover .card-content {
+    max-height: 500px; /* large enough to show content */
+    opacity: 1;
+    padding: 15px 20px;
+}
+
+.card-content ul {
+    list-style: disc inside;
+}
+
+.card-content li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+/* Contact Page Styling */
+.contact {
+    padding: 60px 20px;
+    background-color: #f
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #f4f7fb; /* light neutral background */
+    text-align: center;
+}
+
+/* Section Title */
+.contact h2 {
+    font-size: 3rem;
+    color: royalblue;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Contact Info Box */
+.contact-info {
+    background: linear-gradient(135deg, royalblue, #1a1a1a);
+    color: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    max-width: 650px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.35);
+}
+
+.contact-info p {
+    margin: 12px 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.contact-info strong {
+    display: inline-block;
+    width: 120px;
+    color: #fff;
+}
+
+/* Highlight tagline */
+.contact-info em {
+    color: #f0f8ff;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: royalblue;
+    box-shadow: 0 0 12px rgba(65,105,225,0.5);
+    outline: none;
+}
+
+/* Submit Button */
+.contact-form button {
+    padding: 15px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-info, .contact-form {
+        width: 90%;
+        text-align: center;
+    }
+
+    .contact-info p {
+        text-align: center;
+    }
+}
+
+
